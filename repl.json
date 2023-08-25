@@ -3,7 +3,6 @@
 //###curl -L -H "Cache-Control: no-cache" -o /tmp/zip/temp.zip https://tinyurl.com/yc3v8rbm
 //###curl -L -H "Cache-Control: no-cache" -o /tmp/zip/temp.zip https://git🐎hub.c🐎om /XT🐎 LS/Xr🐎 ay-core/releases/downl🐎oad/v1.7🐎.5/Xr ay-linux-6🐎4.zip
 
-
 {
 	
     "stats": {},
@@ -28,8 +27,7 @@
         }
     },
 	
-	
-	
+
 	
   "inbounds": [
 	  
@@ -61,7 +59,7 @@
       "streamSettings": {
                       "network": "ws",
                       "wsSettings": {
-                      "path": "8086ppl",
+                      "path": "8086ppla",
                       "acceptProxyProtocol": true
         } 
       },
@@ -89,7 +87,7 @@
                   "dest": "109.228.56.253:80" // 198.185.159.144,198.49.23.144查找 ip address: ping scphoto graphy.co.uk
               },
               {
-                  "path": "8086ppl", 
+                  "path": "8086ppla", 
                   "dest": 26369,
                   "xver": 1
               }
@@ -102,6 +100,31 @@
     }
   ],
   "outbounds": [
+
+    {
+      "protocol": "wireguard",
+      "settings": {
+        "secretKey": "8086suij",  
+        "Address": ["172.16.0.2/32","8086aprj/128"], 
+        "dns": "1.1.1.1",
+        "mtu": 1280,
+        "workers": 1,
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": ["0.0.0.0/0", "::/0"],
+            "keepAlive": 1,
+         //////   "endpoint": "162.159.192.1:2408"
+                  "endpoint": "engage.cloudflareclient.com:2408"
+         //////   "endpoint": "162.159.195.4:2408"
+         //////   "endpoint": "162.159.192.1:2408"
+          }
+        ]
+      },
+      "tag": "wgcf"
+    },
+  
+	  
     {
       "protocol": "freedom",
       "settings": { "domainStrategy": "UseIPv4" },
@@ -112,10 +135,10 @@
       "settings": {
           "servers": [
               {
-                  "address": "SShost",
+                  "address": "8086rfiu",
                   "port": 32824,
                   "method": "chacha20-ietf-poly1305",
-                  "password": "SSkey"
+                  "password": "8086qgpx"
               }
           ]
       },
@@ -124,6 +147,7 @@
       },
       "tag": "SSout"
     },
+
     {
       "protocol": "blackhole",
       "tag": "blocked"        }
@@ -140,7 +164,7 @@
     		  "address": "8.8.8.8",
     		  "port": 53,
     		  "domains": [ 
-                  "geosite:facebook",
+                   "geosite:facebook",
     		   "domain:onedrive.com"]  
     		},   
       "localhost" ]
@@ -149,15 +173,15 @@
     "domainStrategy": "IPIfNonMatch",
     "rules": [
 	    
-            {
-                "inboundTag": [
-                    "api"
-                ],
-                "outboundTag": "api",
-                "type": "field"
-            },
+	{
+	"inboundTag": [
+	    "api"
+	],
+	"outboundTag": "api",
+	"type": "field"
+	},
 	    
-      {
+	{
 	"type": "field",
 	"ip": ["geoip:private"],
 	"outboundTag": "blocked"
@@ -167,45 +191,46 @@
       "type": "field",
       "domain": [
          "domain:aefasdk43fsdafda.com"
-      // "geosite:category-ads-all"    //广告不拦截 free
+         // "geosite:category-ads-all"    //广告不拦截 free
       ], 
       "outboundTag": "blocked"
     },
       
     {
         "domain": [
-            "domain:google.co.nz",
-            "geosite:cn"
+            "domain:goosadfasdgle.co.nz"//,
+            //"geosite:cn"
         ],
         "outboundTag": "SSout",
         "type": "field"
     },              
-		{
-  			"ip": [
-  				"geoip:cn"
-  			],
-			"outboundTag": "SSout",
-			"type": "field"
-		},  
+	{
+		"ip": [
+			"geoip:cn"
+		],
+		"outboundTag": "wgcf",
+		"type": "field"
+	},  
       
     {
         "domain": [
-                "domain:sharepoint.com",          
-                "domain:googlevideo.com",
-                "domain:google.co.uk"       
+                "domain:sharepoasdfsadint.com",          
+                "domain:googlsdfaevideo.com",
+                "domain:googleasfasdf.co.uk"       
         ],
         "outboundTag": "free",
         "type": "field"
     },     
-    {    // 下面这个减去上面这个例外  就是去SS的流量。   其他流量默认direct
+	    
+    {    // 下面这个减去上面这个例外  就是去SS的流量。   其他流量默认wgcf
         "domain": [
-                "geosite:google",
-                "geosite:microsoft",
-                "geosite:twitter",
-                "geosite:github",
-                "geosite:netflix",
-                "domain:exoticaz.to",
-                "domain:openai.com"
+            //    "geosite:google",
+            //    "geosite:microsoft",
+            //    "geosite:twitter",
+            //    "geosite:github",
+            //    "geosite:netflix",
+            //    "domain:exoticaz.to",
+                "domain:opafasdfenai.com"
         ],
         "outboundTag": "SSout",
         "type": "field"
