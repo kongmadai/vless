@@ -115,8 +115,8 @@
             "allowedIPs": ["0.0.0.0/0", "::/0"],
             "keepAlive": 1,
          //////   "endpoint": "162.159.192.1:2408"
-                  "endpoint": "engage.cloudflareclient.com:2408"
-         //////   "endpoint": "162.159.195.4:2408"
+         //////   "endpoint": "engage.cloudflareclient.com:2408"
+                  "endpoint": "8086uxer:2408"
          //////   "endpoint": "162.159.192.1:2408"
           }
         ]
