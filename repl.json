@@ -201,7 +201,7 @@
       
     {
         "domain": [
-            "domain:google.co.nz"//,
+            "domain:google.co.nz",
             "geosite:cn"
         ],
         "outboundTag": "wgcf",
