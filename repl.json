@@ -102,6 +102,13 @@
   "outbounds": [
 
     {
+      "protocol": "freedom",
+      "settings": { "domainStrategy": "UseIPv4" },
+      "tag": "free"
+    }, 
+
+	  
+    {
       "protocol": "wireguard",
       "settings": {
         "secretKey": "8086suij",  
@@ -125,11 +132,7 @@
     },
   
 	  
-    {
-      "protocol": "freedom",
-      "settings": { "domainStrategy": "UseIPv4" },
-      "tag": "free"
-    }, 
+
     {
       "protocol": "shadowsocks",
       "settings": {
@@ -199,9 +202,9 @@
     {
         "domain": [
             "domain:goosadfasdgle.co.nz"//,
-            //"geosite:cn"
+            "geosite:cn"
         ],
-        "outboundTag": "SSout",
+        "outboundTag": "wgcf",
         "type": "field"
     },              
 	{
