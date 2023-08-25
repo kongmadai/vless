@@ -162,14 +162,19 @@
          },
   "dns": {
     "servers": [
+
+     "https+local://dns.nextdns.io/6e6358/REPLit", 
+
       "https+local://1.1.1.1/dns-query",
-    		{
-    		  "address": "8.8.8.8",
-    		  "port": 53,
-    		  "domains": [ 
-                   "geosite:facebook",
-    		   "domain:onedrive.com"]  
-    		},   
+	    
+	{
+	  "address": "8.8.8.8",
+	  "port": 53,
+	  "domains": [ 
+	   "geosite:facebook",
+	   "domain:onedrive.com"]  
+	},   
+	    
       "localhost" ]
   },
   "routing": {
@@ -199,14 +204,15 @@
       "outboundTag": "blocked"
     },
       
-    {
-        "domain": [
-            "domain:google.co.nz",
-            "geosite:cn"
-        ],
-        "outboundTag": "wgcf",
-        "type": "field"
-    },              
+	{
+	"domain": [
+	    "domain:google.co.nz",
+	    "geosite:cn"
+	],
+	"outboundTag": "wgcf",
+	"type": "field"
+	},       
+	    
 	{
 		"ip": [
 			"geoip:cn"
@@ -217,7 +223,7 @@
       
     {
         "domain": [
-                "domain:sharepoasdfsadint.com",          
+                "domain:sharepopasdfXXXXXXXX.com",          
                 "domain:googlsdfaevideo.com",
                 "domain:google.co.uk"       
         ],
@@ -225,7 +231,7 @@
         "type": "field"
     },     
 	    
-    {    // 下面这个减去上面这个例外  就是去SS的流量。   其他流量默认wgcf
+    {    //   其他流量默认free
         "domain": [
             //    "geosite:google",
             //    "geosite:microsoft",
@@ -233,7 +239,7 @@
             //    "geosite:github",
             //    "geosite:netflix",
             //    "domain:exoticaz.to",
-                "domain:opafasdfenai.com"
+                "domain:openaiXXSDFXXXXXX.com"
         ],
         "outboundTag": "SSout",
         "type": "field"
