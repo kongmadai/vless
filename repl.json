@@ -201,7 +201,7 @@
       
     {
         "domain": [
-            "domain:goosadfasdgle.co.nz"//,
+            "domain:google.co.nz"//,
             "geosite:cn"
         ],
         "outboundTag": "wgcf",
@@ -219,7 +219,7 @@
         "domain": [
                 "domain:sharepoasdfsadint.com",          
                 "domain:googlsdfaevideo.com",
-                "domain:googleasfasdf.co.uk"       
+                "domain:google.co.uk"       
         ],
         "outboundTag": "free",
         "type": "field"
