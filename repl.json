@@ -163,7 +163,7 @@
   "dns": {
     "servers": [
 
-     "https+local://dns.nextdns.io/8086ouev/REPLit", 
+     "https+local://dns.nextdns.io/8086ouev/REPLit",     // 这波拦截广告adguard
 
       "https+local://1.1.1.1/dns-query",
 	    
@@ -199,14 +199,14 @@
       "type": "field",
       "domain": [
          "domain:aefasdk43fsdafda.com"
-         // "geosite:category-ads-all"    //广告不拦截 free
+         // "geosite:category-ads-all"    //这里的广告拦截 失效
       ], 
       "outboundTag": "blocked"
     },
       
 	{
 	"domain": [
-	    "domain:google.co.nz",
+	    "domain:google.co.nz", // SSS包括warp
 	    "geosite:cn"
 	],
 	"outboundTag": "SSS",
@@ -215,7 +215,7 @@
 	    
 	{
 		"ip": [
-			"geoip:cn"
+			"geoip:cn"   // SSS包括warp
 		],
 		"outboundTag": "SSS",
 		"type": "field"
@@ -223,7 +223,7 @@
       
     {
         "domain": [
-                "domain:sharepopasdfXXXXXXXX.com",          
+                "domain:sharepoint.com",          
                 "domain:googlevideo.com",
                 "domain:google.co.uk"       
         ],
@@ -239,7 +239,7 @@
                 "geosite:github",
                 "geosite:netflix",
                 "domain:exoticaz.to",
-                "domain:openaiXXSDFXXXXXX.com"
+                "domain:openai.com"
         ],
         "outboundTag": "SSS",
         "type": "field"
