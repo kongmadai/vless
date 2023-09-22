@@ -1,4 +1,4 @@
-//note:
+//note:  这是为repl定制的版本
 //### tinyurl =  g i th 🐎 ub .co m / X 🐎T L S/ X r🐎 ay -c or e/rel ea ses/la🐎 test/dow🐎 nload/ X r ay -🐎 l i n u x - 64.zip
 //###curl -L -H "Cache-Control: no-cache" -o /tmp/zip/temp.zip https://tinyurl.com/yc3v8rbm
 //###curl -L -H "Cache-Control: no-cache" -o /tmp/zip/temp.zip https://git🐎hub.c🐎om /XT🐎 LS/Xr🐎 ay-core/releases/downl🐎oad/v1.7🐎.5/Xr ay-linux-6🐎4.zip
@@ -148,7 +148,7 @@
       "streamSettings": {
           "network": "tcp"
       },
-      "tag": "SSout"
+      "tag": "SSS"
     },
 
     {
@@ -163,7 +163,7 @@
   "dns": {
     "servers": [
 
-     "https+local://dns.nextdns.io/6e6358/REPLit", 
+     "https+local://dns.nextdns.io/8086ouev/REPLit", 
 
       "https+local://1.1.1.1/dns-query",
 	    
@@ -209,7 +209,7 @@
 	    "domain:google.co.nz",
 	    "geosite:cn"
 	],
-	"outboundTag": "wgcf",
+	"outboundTag": "SSS",
 	"type": "field"
 	},       
 	    
@@ -217,34 +217,38 @@
 		"ip": [
 			"geoip:cn"
 		],
-		"outboundTag": "wgcf",
+		"outboundTag": "SSS",
 		"type": "field"
 	},  
       
     {
         "domain": [
                 "domain:sharepopasdfXXXXXXXX.com",          
-                "domain:googlsdfaevideo.com",
+                "domain:googlevideo.com",
                 "domain:google.co.uk"       
         ],
         "outboundTag": "free",
         "type": "field"
     },     
 	    
-    {    //   其他流量默认free
+    {    
         "domain": [
-            //    "geosite:google",
-            //    "geosite:microsoft",
-            //    "geosite:twitter",
-            //    "geosite:github",
-            //    "geosite:netflix",
-            //    "domain:exoticaz.to",
+                "geosite:google",
+                "geosite:microsoft",
+                "geosite:twitter",
+                "geosite:github",
+                "geosite:netflix",
+                "domain:exoticaz.to",
                 "domain:openaiXXSDFXXXXXX.com"
         ],
-        "outboundTag": "SSout",
+        "outboundTag": "SSS",
         "type": "field"
     } 
 
+	    
+//   其他流量默认free
+
+	    
     ]
   }
 }
