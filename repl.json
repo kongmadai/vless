@@ -225,6 +225,7 @@
         "domain": [
                 "domain:sharepoint.com",          
                 "domain:googlevideo.com",
+		"domain:graph.microsoft.com",
                 "domain:google.co.uk"       
         ],
         "outboundTag": "free",
