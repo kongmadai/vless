@@ -140,7 +140,7 @@
               {
                   "address": "8086rfiu",
                   "port": 32824,
-                  "method": "chacha20-ietf-poly1305",
+                  "method": "2022-blake3-aes-256-gcm",
                   "password": "8086qgpx"
               }
           ]
