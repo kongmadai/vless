@@ -84,7 +84,7 @@
                   ],
         "fallbacks": [
               { 
-                  "dest": "149.28.148.222:80" //109.228.56.253, 198.185.159.144,198.49.23.144查找 ip address: ping scphoto graphy.co.uk
+                  "dest": "113.96.16.19:80" //149.28.148.222,109.228.56.253, 198.185.159.144,198.49.23.144查找 ip address: ping scphoto graphy.co.uk
               },
               {
                   "path": "8086ppla", 
