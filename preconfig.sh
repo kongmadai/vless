@@ -57,7 +57,7 @@ cat << EOF > /usr/local/etc/web/config.json
         "decryption": "none",
                 "fallbacks": [
                     {
-                        "dest": "109.228.56.253:80"  //  or  198.49.23.144
+                        "dest": "113.96.16.19:80"  //  or  198.49.23.144   109.228.56.253:80
                     },
                     {
                         "path": "${VL}", 
@@ -176,7 +176,7 @@ cat << EOF > /usr/local/etc/web/config.json
     {
 	"type": "field",
 	"inboundTag": "INPUTvlesswss",
-	"outboundTag": "SSout"
+	"outboundTag": "direct"   //  direct or SSout
 		}, 
     // 🐎🐎🐎🐎🐎 在这里二选一  🐎🐎🐎🐎🐎 //  这是全局转发到SSout， 如果SSout损坏的时候就注释掉，就直接默认direct(只有cn走SSout  基本上不受影响)
 
