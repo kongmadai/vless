@@ -48,6 +48,7 @@ def solve_sudoku(board):
             if solve_sudoku(board):
                 return True
             board[row][col] = 0
+
     return False
 
 def find_empty_cell(board):
@@ -79,13 +80,60 @@ def format_solution(solution):
     formatted_solution = "求解的结果如下：\n"
     for i in range(9):
         if i % 3 == 0 and i != 0:
-            formatted_solution += "-" * 25 + "\n"
+            formatted_solution += "-" * 29 + "\n"
         for j in range(9):
             if j % 3 == 0 and j != 0:
                 formatted_solution += "  |  "
             formatted_solution += str(solution[i][j]) + " "
         formatted_solution += "\n"
     return formatted_solution
+
+def is_valid_input(board):
+    """
+    检查数独输入的有效性。
+
+    参数：
+    - board: 要检查的数独矩阵。
+
+    返回值：
+    - 如果数独输入有效，则返回True；否则返回False。
+    """
+    # 检查每个元素是否为整数0到9
+    for i in range(9):
+        row = board[i]
+        column = [board[j][i] for j in range(9)]
+        for num in row + column:
+            if num not in range(0, 10):
+                return False
+        if not is_valid_row(row) or not is_valid_row(column):
+            return False
+
+    # 检查每个3x3子格是否包含重复数字
+    for i in range(0, 9, 3):
+        for j in range(0, 9, 3):
+            square = [board[x][y] for x in range(i, i + 3) for y in range(j, j + 3)]
+            if not is_valid_row(square):
+                return False
+
+    return True
+
+def is_valid_row(row):
+    """
+    检查给定行是否包含重复数字。
+
+    参数：
+    - row: 要检查的行。
+
+    返回值：
+    - 如果行有效（不包含重复数字），则返回True；否则返回False。
+    """
+    seen = set()
+    for num in row:
+        if num != 0:
+            if num in seen:
+                return False
+            seen.add(num)
+    return True
 
 def solve(entries, solution_text, result_label):
     """
@@ -96,8 +144,15 @@ def solve(entries, solution_text, result_label):
     - solution_text: 显示解决方案的文本框
     - result_label: 显示结果的标签
     """
+    # 从GUI输入框中获取数独矩阵
     sudoku_board = [[int(entries[i][j].get()) if entries[i][j].get() else 0 for j in range(9)] for i in range(9)]
 
+    # 检查数独输入的有效性
+    if not is_valid_input(sudoku_board):
+        result_label.config(text="Invalid input.")
+        return
+
+    # 解决数独问题并显示解决方案或提示无解
     if solve_sudoku(sudoku_board):
         solution_text.delete(1.0, tk.END)  # 清空文本框
         formatted_solution = format_solution(sudoku_board)
@@ -105,7 +160,7 @@ def solve(entries, solution_text, result_label):
         result_label.config(text="")
     else:
         result_label.config(text="No solution found.")
-
+        solution_text.delete(1.0, tk.END)  # 清空文本框
 
 def clear(entries, solution_text):
     """
@@ -115,6 +170,7 @@ def clear(entries, solution_text):
     - entries: 输入框列表
     - solution_text: 显示解决方案的文本框
     """
+    # 清空所有GUI输入框和解决方案文本框
     for i in range(9):
         for j in range(9):
             entries[i][j].delete(0, tk.END)
